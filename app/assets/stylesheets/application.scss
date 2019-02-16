@@ -1,0 +1,44 @@
+$primary-color:  #368cbf;
+$secondary-color:#7ebc59;
+$tertiary-color: #33363b; 
+$light-grey:     #fefcfc; 
+$text-color:     #666666;
+
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+
+@import "arts";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h2 {
+  color: $text-color;
+}
+
+// Utilities
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.text-center {text-align: center;}
+.py-1 {padding: 1.5rem 0;}
+.py-2 {padding: 2rem 0;}
+.py-3 {padding: 3rem 0;}
+.p-1 {padding: 1.5rem;}
+.p-2 {padding: 2rem;}
+.p-3 {padding: 3rem;}

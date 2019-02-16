@@ -1,0 +1,100 @@
+// ART INDEX PAGE
+.posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+
+  .post{
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12);
+    padding: 0.6em;
+    img {
+      width:100%;
+      height: 350px;
+    }
+  }
+}
+
+// ART SHOW PAGE
+.show-posts {
+  padding: 1rem;
+
+  .show-post img {
+    width: 100%;
+    margin: 2rem auto;
+    span p {
+      font-size: .5rem;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+  }
+}
+
+// FORM
+form {
+  max-width: 50%;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: .3rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px 0 rgba(0, 0, 0, 0.08);
+
+  label {
+    display: block;
+    padding: .8rem 0;
+    font-size: 1rem;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-out;
+  }
+
+  .btn-upload {
+    border: 1px solid gray;
+    color: gray;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: $text-color;
+    border: 1px solid gray;
+    border-radius: 8px;
+
+    &:placeholder-shown+label {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+  }
+
+  textarea {
+    height: 150px;
+  }
+}
+
+.art-btn {
+  border: 0;
+  background: #2159e6;
+  padding: .7rem;
+  color: #ffffff;
+  font-size: .8rem;
+  margin: 2rem 0;
+  width: auto;
+  text-transform: uppercase;
+  transition: 650ms;
+
+  &:hover {
+    background: #4b7eff;
+    transition: 650ms;
+  }
+}

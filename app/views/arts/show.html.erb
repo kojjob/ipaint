@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<div class="show-posts container">
+  <section class="show-post" >
+    <h2 class="text-center py-1"><%= @art.title %>
+    <span><p><%= @art.author %></p></span>
+    </h2>
+    <%= image_tag @art.image %>
+    <p><%= @art.detail %></p>
+    <%= link_to 'Edit', edit_art_path(@art) %>
+    <%= link_to 'Back', arts_path %>
+  </section>
+</div>

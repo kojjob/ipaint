@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="text-center">Arts</h1>
+
+<div class="posts">
+   <% @arts.each do |art| %>
+    <section class="post" >
+      <div class="container">
+        <h2 class="text-center py-1"><%= link_to art.title, art %></h2>
+        <%= link_to image_tag(art.image), art %>
+        <p><%= truncate(art.detail)  %></p>
+        <h5><%= art.author %></h5>
+        <%= link_to 'Edit', edit_art_path(art) %>
+        <%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    </section>
+  <% end %>
+</div>
+
+<br>
+
+<%= link_to 'New Art', new_art_path %>

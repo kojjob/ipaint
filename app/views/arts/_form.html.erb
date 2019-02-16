@@ -1,0 +1,41 @@
+<section id="art-form" class="art-form">
+<%= form_with(model: art, local: true) do |form| %>
+  <% if art.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(art.errors.count, "error") %> prohibited this art from being saved:</h2>
+
+      <ul>
+      <% art.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control",placeholder:"Enter image title" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :image %>
+    <%= form.file_field :image, class:"btn-upload" %>
+  </div>
+
+
+  <div class="form-group">
+    <%= form.label :detail %>
+    <%= form.text_area :detail, class: "form-control", placeholder:"Enter some description" %>
+  </div>
+
+
+  <div class="form-group">
+    <%= form.label :author %>
+    <%= form.text_field :author, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit class: "art-btn" %>
+  </div>
+<% end %>
+</se>
